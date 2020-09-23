@@ -1,1 +1,4 @@
 https://tfdemo2.us.truefort.net:8090/kotoba/rest/classifier/getAllByType
+
+
+query is written as per documentation but doesn't work
