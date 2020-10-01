@@ -15,6 +15,7 @@ fi
 
 echo $1
 echo $2
+mkdir old
 
 # is it resolvable
 if nslookup $1 1> /dev/null ; then
