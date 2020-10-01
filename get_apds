@@ -1,1 +1,1 @@
-https://tfdemo1.us.truefort.net:8090/kotoba/rest/v1.0/apds/exportfile?appname=HRPS&state=DEPLOYED&identifier=APP%20SERVER&type=PROCESS&roletype=AGENTROLE&isminify=false
+https://tfdemo2.us.truefort.net:8090/kotoba/rest/v1.0/apds/exportfile?appname=HRPS&state=DEPLOYED&identifier=APP%20SERVER&type=PROCESS&roletype=AGENTROLE&isminify=false
