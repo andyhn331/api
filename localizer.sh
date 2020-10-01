@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Simple script to modify the URI for all scripts in this directory to 
+# Simple scrit to modify the URI for all scripts in this directory to 
 # map to your TrueFort appliance ID
 
 # usage: ./localizer.sh FQDN port
@@ -31,3 +31,4 @@ do
 	sed "s/tfdemo2.us.truefort.net:8090/$1:$2/g" $file >$file.local
 	mv $file ./old/$file
 done
+
