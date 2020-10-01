@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Simple scrit to modify the URI for all scripts in this directory to 
+# Simple script to modify the URI for all scripts in this directory to 
 # map to your TrueFort appliance ID
 
 # usage: ./localizer.sh FQDN port
