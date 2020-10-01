@@ -3,24 +3,30 @@
 # Simple scrit to modify the URI for all scripts in this directory to 
 # map to your TrueFort appliance ID
 
-# usage: ./localizer.sh https://FQDN:port
-# 	 ./localizer.sh https://tfdemo1.us.truefort.net:8090
+# usage: ./localizer.sh FQDN port
+# 	 ./localizer.sh tfdemo2.us.truefort.net 8090
 
-if [ -z "$1" ]
+
+if [ -z "$2" ]
 then
-	echo "Incorrect number of parameters"
+	echo "Incorrect number of parameters, requires FQDN PORT"
 	exit 1
 fi
 
-parse $1 to make sure it conforms to spec https://URI:port
+echo $1
+echo $2
 
-for file in `pwd`
-	if $file = this file; ignore
-	us ls not pwd to create list
-for
- all other files replace static URL ith $1
+# is it resolvable
+if nslookup $1 1> /dev/null ; then
+	echo "host $1 resolves"
+else
+	echo "$1 does not resolve"
+	exit 1
+fi
 
-error handling
-	no $1
-	$1 doesn't parse
-	permissions on files
+for file in `ls | egrep -v "README|localizer|old"`
+do
+	echo parsing $file
+	sed "s/tfdemo2.us.truefort.net:8090/$1:$2/g" $file >$file.local
+	mv $file ./old/$file
+done
